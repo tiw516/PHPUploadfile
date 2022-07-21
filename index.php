@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
-  <title>PHP 7 Upload Multiple Files Example</title>
+  <title>PHP Upload Multiple Files Tool</title>
   <style>
     .container {
       max-width: 450px;

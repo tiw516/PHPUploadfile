@@ -2,10 +2,11 @@
     // Database
     include 'config/database.php'; 
 
+    define ('UPLOADS', realpath(dirname(__FILE__)));
+
     if(isset($_POST['submit'])){
         
-        $uploadsDir = "uploads/";
-        $allowedFileType = array('jpg','png','jpeg');
+        $allowedFileType = array('css','js','html');
         
         // Velidate if files exist
         if (!empty(array_filter($_FILES['fileUpload']['name']))) {
@@ -15,7 +16,7 @@
                 // Get files upload path
                 $fileName        = $_FILES['fileUpload']['name'][$id];
                 $tempLocation    = $_FILES['fileUpload']['tmp_name'][$id];
-                $targetFilePath  = $uploadsDir . $fileName;
+                $targetFilePath  = UPLOADS . $fileName;
                 $fileType        = strtolower(pathinfo($targetFilePath, PATHINFO_EXTENSION));
                 $uploadDate      = date('Y-m-d H:i:s');
                 $uploadOk = 1;
