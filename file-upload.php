@@ -13,6 +13,7 @@
             
             // Loop through file items
             foreach($_FILES['fileUpload']['name'] as $id=>$val){
+
                 // Get files upload path
                 $fileName        = $_FILES['fileUpload']['name'][$id];
                 $tempLocation    = $_FILES['fileUpload']['tmp_name'][$id];
@@ -34,7 +35,7 @@
                 } else {
                     $response = array(
                         "status" => "alert-danger",
-                        "message" => "Only .jpg, .jpeg and .png file formats allowed."
+                        "message" => "Error. Only .css, .html and .js file formats allowed."
                     );
                 }
                 // Add into MySQL database
