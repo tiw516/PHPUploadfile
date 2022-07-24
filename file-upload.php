@@ -23,7 +23,7 @@
                 $uploadOk = 1;
 
                 if(in_array($fileType, $allowedFileType)){
-                        if(move_uploaded_file($tempLocation, $targetFilePath)){
+                        if(move_uploaded_file($tempLocation, $targetFilePath) && (1024 <= filesize($_FILES['foto']['tmp_name'])) && (10485760 >= filesize($_FILES['foto']['tmp_name']))){
                             $sqlVal = "('".$fileName."', '".$uploadDate."')";
                         } else {
                             $response = array(
